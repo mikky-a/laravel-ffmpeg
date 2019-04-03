@@ -43,6 +43,11 @@ class Media
         return $this->media->getStreams()->first();
     }
 
+    public function getFirstVideoStream()
+    {
+        return $this->media->getStreams()->videos()->first();
+    }
+
     public function getDurationInMiliseconds(): float
     {
         $stream = $this->getFirstStream();
